@@ -1,0 +1,46 @@
+
+<div class="card">
+    <div class="card-body">
+        <h2 class="text-center">
+            Clientes
+        </h2>
+        <table class="table table-sm table-hover">
+            <thead>
+                <tr>
+                  <th>Nombres</th>
+                  <th>DUI Cliente</th>
+                  <th>Vehiculo</th>
+                  <th>Costo Reparacion</th>
+                  <th>Nº visitas</th>
+                  <th>Descuento($)</th>
+                  <th>Costo Reparacion Con Descuento</th>
+                </tr>
+              </thead>
+            <tbody>
+               
+                <tr *ngFor="let product of productList">
+                               
+                    <td>{{product.name}}</td>
+                    <td>{{product.category}}</td>
+                    <td>{{product.vehiculo}}</td>
+                    <td>${{product.price}}</td>
+                    
+                    <td>{{product.nvisita}}</td>
+                    <td>${{product.price*visitas(product.nvisita)}}</td>
+                    <td>${{product.price-(product.price*visitas(product.nvisita))}}</td>
+                    <td>
+                        <a class="btn btn-primary text-white" (click)="onEdit(product)">
+                            <i class="far fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger text-white" (click)="onDelete(product.$key)">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                        <a class="btn btn-danger text-white" (click)="onDelete(product.$key)">
+                            <i class="">Crear ticket</i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+
+<div class="card mt-5">
+    <div class="card-body">
+
+        <!-- Cuando el evento onSubmit , suceda se va pasar todo el formulario 'productForm' -->
+        <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+
+            <!-- TO UPDATE -->
+            <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="productService.selectedProduct.$key">
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" #name="ngModel"
+                    [(ngModel)]="productService.selectedProduct.name" placeholder="Nombres">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="category" #category="ngModel"
+                    [(ngModel)]="productService.selectedProduct.category" placeholder="DUI cliente">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="vehiculo" #vehiculo="ngModel"
+                    [(ngModel)]="productService.selectedProduct.vehiculo" placeholder="Vehiculo cliente">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" name="nvisita" #nvisita="ngModel"
+                    [(ngModel)]="productService.selectedProduct.nvisita" placeholder="visita">
+            </div>
+
+            
+            
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        
+                    </div>
+                    <input type="number" class="form-control" name="price" #price="ngModel"
+                        [(ngModel)]="productService.selectedProduct.price" placeholder="Costo reparacion">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-plus-circle"></i> Agregar cliente
+                </button>
+                <button class="btn btn-secondary" type="reset" (click)="resetForm(productForm)">
+                    <i class="fas fa-sync-alt"></i> Borrar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

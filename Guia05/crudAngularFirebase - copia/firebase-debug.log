@@ -1,0 +1,55 @@
+[debug] [2020-09-30T06:39:03.468Z] ----------------------------------------------------------------------
+[debug] [2020-09-30T06:39:03.485Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\man\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-09-30T06:39:03.486Z] CLI Version:   8.11.2
+[debug] [2020-09-30T06:39:03.487Z] Platform:      win32
+[debug] [2020-09-30T06:39:03.487Z] Node Version:  v14.12.0
+[debug] [2020-09-30T06:39:03.500Z] Time:          Wed Sep 30 2020 00:39:03 GMT-0600 (hora estándar central)
+[debug] [2020-09-30T06:39:03.500Z] ----------------------------------------------------------------------
+[debug] [2020-09-30T06:39:03.501Z] 
+[debug] [2020-09-30T06:39:03.552Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-30T06:39:03.562Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\man\Documents\GuiaLabDPS_MD130678\Guia05\crudAngularFirebase - copia
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using crudangularfirebase-faa00. 
+[debug] [2020-09-30T06:39:17.633Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/crudangularfirebase-faa00  
+ 
+[debug] [2020-09-30T06:39:18.183Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Wed, 30 Sep 2020 06:39:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-30T06:39:18.183Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-09-30T06:39:18.194Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-09-30T06:39:18.207Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\man\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\man\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\man\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:314:20)
+    at Request.EventEmitter.emit (domain.js:486:12)
+    at Request.<anonymous> (C:\Users\man\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:314:20)
+    at Request.EventEmitter.emit (domain.js:486:12)
+    at IncomingMessage.<anonymous> (C:\Users\man\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:420:28)
+    at IncomingMessage.emit (events.js:326:22)
+    at IncomingMessage.EventEmitter.emit (domain.js:486:12)
+    at endReadableNT (_stream_readable.js:1252:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to get Firebase project crudangularfirebase-faa00. Please make sure the project exists and your account has permission to access it.
